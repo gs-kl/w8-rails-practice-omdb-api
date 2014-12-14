@@ -1,0 +1,12 @@
+<%= form_tag do %>
+  <%= text_field_tag(:title) %>
+  <%= submit_tag %>
+<% end %>
+
+<% if @search_results %>
+  <ul>
+    <% @search_results.each do |result| %>
+      <li><%= result["Title"] %></li>
+    <% end %>
+  </ul>
+<% end %>
